@@ -1,0 +1,12 @@
+.footer {
+  background-color: #252627;
+  color: #fff;
+
+}
+.footer__brand {
+  padding: 2em 1em;
+  background: linear-gradient(to right, rgba(120, 50, 155, .95) 0%, rgba(0, 164, 225, .95) 66%, rgba(0, 164, 225, .95) 100%);
+  img {
+    max-width: 100%;
+  }
+}

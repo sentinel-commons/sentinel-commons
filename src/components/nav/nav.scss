@@ -1,0 +1,15 @@
+.page-nav {
+  position: sticky;
+  background-color: #707070;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: .25em;
+}
+.page-nav__link {
+  color: #fff;
+  text-decoration: none;
+  & + & {
+    margin-left: 1em
+  }
+}
