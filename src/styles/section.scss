@@ -1,30 +1,37 @@
 @import "var.scss";
 
+.featured-section {
+  position: relative;
+  background-color: #fff;
+  &--narrow {
+    max-width: $page-narrow;
+  }
+  &--wide {
+    max-width: $page-wide;
+  }
+}
+
 .page-section {
   position: relative;
-  padding: 2em 1.625em;
   background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  &--narrow {
+    max-width: $page-narrow;
+  }
+  &--wide {
+    max-width: $page-wide;
+  }
 }
 .page-section__title {
-  margin-top: 0;
-  margin-bottom: .786em;
   letter-spacing: 2px;
-  font-size: 4em;
   text-transform: uppercase;
   color: #00A4E2; 
 }
 .page-section__content {
   color: #707070;
   font-family: 'Amiri';
-  line-height: 1.4;
-  font-size: 2.4em;
+  // line-height: 2;
   font-weight: 500;
   letter-spacing: 1px;
-  margin-top: 0;
-  margin-bottom: 2.5em;
   &--narrow {
     max-width: $page-narrow;
   }

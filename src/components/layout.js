@@ -11,6 +11,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
+import "tachyons/css/tachyons.min.css";
 import "../styles/layout.scss"
 
 const Layout = ({ children }) => (
@@ -30,11 +31,6 @@ const Layout = ({ children }) => (
         <div className="App">
           <main>{children}</main>
           <Footer />
-          {/* <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer> */}
         </div>
       </>
     )}
