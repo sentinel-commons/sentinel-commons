@@ -4691,6 +4691,11 @@ gatsby-link@^2.1.1:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
+gatsby-plugin-hubspot@^1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-hubspot/-/gatsby-plugin-hubspot-1.2.6.tgz#f5c987da8b1708c67a660f3688c0a0ae20c85638"
+  integrity sha512-BH0C0hszCDhbMEgGfND2pWoIUeu27gavZx7yUE6XNlHAUKvnru0stK5oPZPwaJa2geEXeSB5Y/emdqxoz3wCUA==
+
 gatsby-plugin-manifest@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.1.1.tgz#e987d6e655b1dcfba6e10d65ff20722aaeb75391"
