@@ -1,44 +1,27 @@
 import React from 'react'
 import logo from '../../images/logo.svg'
+import { Facebook, Twitter, Instagram, Linkedin } from 'react-feather'
 import './footer.scss'
 
 function Footer() {
   return (
     <div className="footer">
-      <div className="footer__section">
-        <h2>LEASING INFO:</h2>
-        <h3>
-          ADDRESS: 
-        </h3>
-        <p>
-          418 North Marshall St. Winston-Salem, NC 27101
-        </p>
+      <div className="footer__brand pa4">
+        <img src={logo} alt="Sentinel Commons Logo" className="footer__brand__logo mt3 mb3 mb4-l"/>
+        <div className="footer__brand__social-image-links social-image-links mb4-l">
+          <Twitter size={40} fill="#fff" stroke="transparent" className="mr2" />
+          <Facebook size={40} fill="#fff" stroke="transparent" className="mr2" />
+          <Instagram size={40} className="mr2" />
+          <Linkedin size={40} fill="#fff" stroke="transparent" className="pl2 pr2" />
+        </div>
+        <p className="f6 fw5">The concepts presented are preliminary and subject to change.</p>
       </div>
-      <div className="footer__section">
-        <h3>
-          LOCATION: 
-        </h3>
-        <p>
-          Twin City Quarter / Downtown Epicenter
+      <div className="footer__section pa4 pa5-l">
+        <h2 className="ttu f3 mt0 mb4-l">Contact</h2>
+        <p className="f4 fw6 tracked-l">418 North Marshall St. <br />Winston-Salem, NC 27101</p>
+        <p className="f4 fw6 tracked-l mb0">
+          <a className="no-underline white pointer" href="tel:3368313723">336.831.3723</a>
         </p>
-      </div>
-      <div className="footer__section">
-        <p>
-          Available Square Footage +/-: 66,150 SF 
-        </p>
-        <p>
-          To learn more about this property, contact: 
-        </p>
-        <p>
-          Kane Wilkerson
-          kane@theardengroup.com
-          C: 336.831.3723
-          O: 336.724.9100
-        </p>
-      </div>       
-      <div className="footer__brand">
-        <img src={logo} alt="Sentinel Commons Logo" className="footer__brand__logo"/>
-        <div className="footer__brand__social-image-links social-image-links"></div>
       </div>
     </div>
   )

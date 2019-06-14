@@ -4,7 +4,7 @@ import React from "react"
 import Nav from './nav';
 
 const Header = ({ siteTitle }) => (
-  <header>
+  <header className="fixed left-0 right-0 z-1">
    <Nav />
   </header>
 )

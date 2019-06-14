@@ -37,7 +37,7 @@ const IndexPage = ({ data }) => {
       <div className="featured-section flex flex-column center-l">
         <h2 className={`
           page-section__title 
-          f2 f-subheadline-l
+          f2 f1-l
           pl3 pr3 pt2 pb0 
           mb mt4 mb4 mb1-l
         `}>A MODERN &amp; FRESH APPROACH</h2>
@@ -49,7 +49,7 @@ const IndexPage = ({ data }) => {
           pa3 pt0
         `}>Located in the vibrant downtown core of Winston-Salem, <strong>Sentinel Commons</strong> is a mixed-use development that <strong>celebrates community</strong> by bringing people together. Here, unique office space, opportunities for co-working, arts, recreation, delicious food choices and entertainment come together in one convenient setting.</p>
       </div>
-      <div className="page-section page-section--narrow flex flex-column flex-row-l tl-l center-l">
+      <div className="page-section page-section--narrow flex flex-column flex-row-l tl-l center-l pl4-l pr4-l">
         <div>
           <img className="dn-l mw100" src={journalPaperImage} alt="black and white photograph of paper rolls in sentinel building"/>
         </div>
