@@ -1,6 +1,6 @@
 .page-nav {
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
   background-color: #707070;
@@ -17,9 +17,9 @@
   }
 }
 
-@media (min-width: 60em) {
-  .page-nav {
-    bottom: auto;
-    top: 0;
-  }
-}
+// @media (min-width: 60em) {
+//   .page-nav {
+//     bottom: auto;
+//     top: 0;
+//   }
+// }
