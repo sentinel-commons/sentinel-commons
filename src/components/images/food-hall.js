@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { isMobile } from "../../utils"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -13,10 +14,18 @@ import Img from "gatsby-image"
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
 
+const alt = "Renderings of Sentinel Commons food hall"
 const FoodHallImage = props => (
   <StaticQuery
     query={graphql`
       query {
+        mobileImage: file(relativePath: { eq: "food-hall.jpg" }) {
+          childImageSharp {
+            fixed(width: 768, cropFocus: SOUTHEAST) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
         placeholderImage: file(relativePath: { eq: "food-hall.jpg" }) {
           childImageSharp {
             fixed(width: 1000) {
@@ -26,15 +35,23 @@ const FoodHallImage = props => (
         }
       }
     `}
-    render={data => 
-      <Img 
-        {...props}
-        fixed={data.placeholderImage.childImageSharp.fixed} 
-        objectFit="cover"
-        objectPosition="50% 50%"
-        style={ { maxWidth: "100%", } }
-        alt="Renderings of Sentinel Commons food hall"
-      />
+    render={data =>
+      isMobile ? (
+        <img
+          {...props}
+          src={data.mobileImage.childImageSharp.fixed.src}
+          alt={alt}
+        />
+      ) : (
+        <Img
+          {...props}
+          fixed={data.placeholderImage.childImageSharp.fixed}
+          objectFit="cover"
+          objectPosition="50% 50%"
+          style={{ maxWidth: "100%" }}
+          alt={alt}
+        />
+      )
     }
   />
 )

@@ -78,7 +78,7 @@ const IndexPage = ({ data }) => {
         `}><strong>Sentinel Commons</strong> is situated just steps away from the City’s most dynamic downtown corridors. <strong>Neighboring attractions</strong> include renowned performance arts venue the Stevens Center, popular local restaurants, hotels, pubs, and breweries. Our location is central to internationally ranked USA Cycling Pro-Road Tour bicycle race, the Winston-Salem Classic. The River Run Film Festival, the National Black Theatre Festival, and various other events are also held downtown throughout the year. We are perfectly situated for the professional who wishes to <strong>enhance the balance between work and leisure.</strong></p>
         </div>
       </div>
-      <SixthStreetImage className="mb6-l" />
+      <SixthStreetImage className="mb6-l mw-100" />
       <div className="page-section page-section--medium flex flex-column flex-row-l tl-l center-l pl4-l pr4-l mb6-l">
         <div className="w-third-l mr4-l">
           <h2 className={`
@@ -111,8 +111,8 @@ const IndexPage = ({ data }) => {
           <img className="w-100" src={foodHallFood} alt="Images of food you might eat at the food hall!"/>
         </div>
       </div>
-      <CoWorkingImage />
-      <MarshallStreetImage className="mb0" />
+      <CoWorkingImage className="mw-100" />
+      <MarshallStreetImage className="mb0 mw-100" />
     </Layout>
   )
 }
