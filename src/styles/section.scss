@@ -17,6 +17,9 @@
   &--narrow {
     max-width: $page-narrow;
   }
+  &--medium {
+    max-width: $page-medium;
+  }
   &--wide {
     max-width: $page-wide;
   }

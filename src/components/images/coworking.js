@@ -13,13 +13,13 @@ import Img from "gatsby-image"
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
 
-const CoWorkingImage = () => (
+const CoWorkingImage = props => (
   <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "co-working.jpg" }) {
+        placeholderImage: file(relativePath: { eq: "coworking.jpg" }) {
           childImageSharp {
-            fixed(width: 1920, height: 914) {
+            fixed(width: 1920, height: 914, cropFocus: SOUTH) {
               ...GatsbyImageSharpFixed
             }
           }
@@ -28,9 +28,8 @@ const CoWorkingImage = () => (
     `}
     render={data => 
       <Img 
+        {...props}
         fixed={data.placeholderImage.childImageSharp.fixed} 
-        objectFit="cover"
-        objectPosition="50% 20%"
         alt="Renderings of Sentinel Commons coworking"
       />
     }

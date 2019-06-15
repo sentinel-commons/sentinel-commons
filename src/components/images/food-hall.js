@@ -13,13 +13,13 @@ import Img from "gatsby-image"
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
 
-const FoodHallImage = () => (
+const FoodHallImage = props => (
   <StaticQuery
     query={graphql`
       query {
         placeholderImage: file(relativePath: { eq: "food-hall.jpg" }) {
           childImageSharp {
-            fixed(width: 1920, height: 914) {
+            fixed(width: 1000) {
               ...GatsbyImageSharpFixed
             }
           }
@@ -28,9 +28,11 @@ const FoodHallImage = () => (
     `}
     render={data => 
       <Img 
+        {...props}
         fixed={data.placeholderImage.childImageSharp.fixed} 
         objectFit="cover"
-        objectPosition="50% 20%"
+        objectPosition="50% 50%"
+        style={ { maxWidth: "100%", } }
         alt="Renderings of Sentinel Commons food hall"
       />
     }

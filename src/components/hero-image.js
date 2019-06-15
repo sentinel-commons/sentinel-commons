@@ -20,7 +20,7 @@ const HeroImage = props => (
       query {
         placeholderImage: file(relativePath: { eq: "hero-mobile.jpg" }) {
           childImageSharp {
-            fixed(width: 960) {
+            fixed(width: 768) {
               ...GatsbyImageSharpFixed
             }
           }

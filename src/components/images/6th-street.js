@@ -13,7 +13,7 @@ import Img from "gatsby-image"
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
 
-const SixthStreetImage = () => (
+const SixthStreetImage = props => (
   <StaticQuery
     query={graphql`
       query {
@@ -28,6 +28,7 @@ const SixthStreetImage = () => (
     `}
     render={data => 
       <Img 
+        {...props}
         fixed={data.placeholderImage.childImageSharp.fixed} 
         objectFit="cover"
         objectPosition="50% 20%"

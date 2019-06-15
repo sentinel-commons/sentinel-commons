@@ -8,6 +8,7 @@ import MarshallStreetImage from "../components/images/marshall-street"
 import logo from '../images/logo.svg'
 import journalPaperImage from '../images/journal-paper.jpg'
 import journalPressImage from '../images/journal-press.jpg'
+import foodHallFood from '../images/food-hall-food.jpg'
 
 import '../components/hero.scss'
 import '../styles/section.scss'
@@ -46,9 +47,9 @@ const IndexPage = ({ data }) => {
           pa3 pt0
         `}>Located in the vibrant downtown core of Winston-Salem, <strong>Sentinel Commons</strong> is a mixed-use development that <strong>celebrates community</strong> by bringing people together. Here, unique office space, opportunities for co-working, arts, recreation, delicious food choices and entertainment come together in one convenient setting.</p>
       </div>
-      <div className="page-section page-section--narrow flex flex-column flex-row-l tl-l center-l pl4-l pr4-l">
+      <div className="page-section page-section--narrow flex flex-column flex-row-l tl-l center-l pl4-l pr4-l mb5-l">
         <div>
-          <img className="dn-l mw100" src={journalPaperImage} alt="black and white photograph of paper rolls in sentinel building"/>
+          <img className="dn-l mw-100" src={journalPaperImage} alt="black and white photograph of paper rolls in sentinel building"/>
         </div>
         <div className="w-50-l mr6-l">
           <h2 className={`
@@ -77,9 +78,41 @@ const IndexPage = ({ data }) => {
         `}><strong>Sentinel Commons</strong> is situated just steps away from the City’s most dynamic downtown corridors. <strong>Neighboring attractions</strong> include renowned performance arts venue the Stevens Center, popular local restaurants, hotels, pubs, and breweries. Our location is central to internationally ranked USA Cycling Pro-Road Tour bicycle race, the Winston-Salem Classic. The River Run Film Festival, the National Black Theatre Festival, and various other events are also held downtown throughout the year. We are perfectly situated for the professional who wishes to <strong>enhance the balance between work and leisure.</strong></p>
         </div>
       </div>
-      <SixthStreetImage />
+      <SixthStreetImage className="mb6-l" />
+      <div className="page-section page-section--medium flex flex-column flex-row-l tl-l center-l pl4-l pr4-l mb6-l">
+        <div className="w-third-l mr4-l">
+          <h2 className={`
+            page-section__title 
+            f2 f1-l
+            pl3 pr3 pt2 pb0 pl0-l pr0-l
+            mb mt4 mb4 mb1-l mt0-l
+          `}>FOODHALL & MARKET</h2>
+          <p className={`
+            page-section__content
+            f4 f3-l 
+            lh-copy 
+            pa3 pt0 pl0-l pr0-l
+            ml1 mr1
+          `}>
+            The <strong>Food Hall &amp; Market</strong> brings the <strong>authentic</strong> culinary talent of Winston-Salem together in one central location. Our intent is to offer a variety of high-quality, <strong>well-curated food options</strong> that can be enjoyed in the outside courtyard or in one central food hall location. Choose to dine with friends, family, or choose a convenient take away option. Local restaurants, farmers and rising chefs will bring an assortment of flavors to <strong>accommodate your dynamic lifestyle needs.</strong>             
+          </p>
+          <p className={`
+            page-section__content
+            f4 f3-l 
+            lh-copy 
+            pa3 pt0 pl0-l pr0-l
+            ml1 mr1
+          `}>
+            The start-up investment cost compared to a full restaurant will be a fraction, lowering barriers to entry for creative entrepreneurs. This will be ideal for food trucks or caterers seeking a permanent location as well as excellent established local and regional concepts seeking a new outlet or downtown location.
+          </p>
+        </div>
+        <div className="w-two-thirds-l pl4-l pr4-l">
+          <FoodHallImage className="mw-100 mb2" />
+          <img className="w-100" src={foodHallFood} alt="Images of food you might eat at the food hall!"/>
+        </div>
+      </div>
       <CoWorkingImage />
-      <MarshallStreetImage />
+      <MarshallStreetImage className="mb0" />
     </Layout>
   )
 }

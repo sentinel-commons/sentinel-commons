@@ -13,7 +13,7 @@ import Img from "gatsby-image"
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
 
-const MarshallStreetImage = () => (
+const MarshallStreetImage = props => (
   <StaticQuery
     query={graphql`
       query {
@@ -28,10 +28,9 @@ const MarshallStreetImage = () => (
     `}
     render={data => 
       <Img 
+        {...props}
         fixed={data.placeholderImage.childImageSharp.fixed} 
         objectFit="cover"
-        objectPosition="bottom 50%"
-        bottom="0"
         alt="Renderings of Sentinel Commons with Marshall Street in foreground"
       />
     }
