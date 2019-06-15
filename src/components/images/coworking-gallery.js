@@ -1,7 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { isMobile } from "../../utils"
 
 const alt = "Renderings of Sentinel Commons food hall"
 const CoworkingGallery = props => (
@@ -10,20 +9,20 @@ const CoworkingGallery = props => (
       query {
         imageOne: file(relativePath: { eq: "laptop-guy.jpg" }) {
           childImageSharp {
-            fixed(width: 768, height: 528, cropFocus: EAST) {
+            fixed(width: 768, height: 528, cropFocus: WEST) {
               ...GatsbyImageSharpFixed
             }
-            fluid(maxWidth: 768, cropFocus: EAST) {
+            fluid(maxWidth: 438, maxHeight: 580, cropFocus: WEST) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         imageTwo: file(relativePath: { eq: "macs-rule.jpg" }) {
           childImageSharp {
-            fixed(width: 768, height: 528, cropFocus: EAST) {
+            fixed(width: 768, height: 528, cropFocus: WEST) {
               ...GatsbyImageSharpFixed
             }
-            fluid(maxWidth: 768, cropFocus: EAST) {
+            fluid(maxWidth: 438, maxHeight: 580, cropFocus: WEST) {
               ...GatsbyImageSharpFluid
             }
           }
