@@ -4,6 +4,7 @@ import HeroImage from "../components/hero-image"
 import SixthStreetImage from "../components/images/6th-street"
 import CoWorkingImage from "../components/images/coworking"
 import FoodHallImage from "../components/images/food-hall"
+import MarshallStreetImage from "../components/images/marshall-street"
 import logo from '../images/logo.svg'
 import journalPaperImage from '../images/journal-paper.jpg'
 import journalPressImage from '../images/journal-press.jpg'
@@ -77,8 +78,8 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
       <SixthStreetImage />
-      <FoodHallImage />
       <CoWorkingImage />
+      <MarshallStreetImage />
     </Layout>
   )
 }
