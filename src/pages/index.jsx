@@ -1,11 +1,16 @@
 import React from "react"
-// import { Link } from "gatsby"
+
+// Component Images
 import HeroImage from "../components/hero-image"
-import SixthStreetImage from "../components/images/6th-street"
+import FifthStreetImage from "../components/images/5th-street"
 import CoWorkingImage from "../components/images/coworking"
 import FoodHallImage from "../components/images/food-hall"
 import CoworkingGallery from "../components/images/coworking-gallery"
 import MarshallStreetImage from "../components/images/marshall-street"
+import FifthMarshallStreetImage from "../components/images/5th-marshall-street"
+import BeerGardenPrimary from "../components/images/beer-garden-primary"
+
+// Images
 import logo from "../images/logo.svg"
 import journalPaperImage from "../images/journal-paper.jpg"
 import journalPressImage from "../images/journal-press.jpg"
@@ -140,7 +145,7 @@ const IndexPage = ({ data }) => {
           </p>
         </div>
       </div>
-      <SixthStreetImage className="mb6-l mw-100" />
+      <FifthStreetImage className="mb6-l mw-100" />
       <div className="page-section page-section--medium flex flex-column flex-row-l tl-l center-l pl4-l pr4-l mb2 mb6-l">
         <div className="w-third-l mr4-l">
           <h2
@@ -226,13 +231,49 @@ const IndexPage = ({ data }) => {
             businesses, remote workers and visitors to Winston-Salem will&nbsp;
             <strong>organically connect and innovate here,</strong>
             in the comfort of an inviting living room setting. Offering
-            strategically designed and <strong>flexible solutions</strong> with premier
-            amenities, our co-working space will inspire you or your team to
-            reach untapped potential.
+            strategically designed and <strong>flexible solutions</strong> with
+            premier amenities, our co-working space will inspire you or your
+            team to reach untapped potential.
           </p>
         </div>
         <div className="w-two-thirds-l pl4-l pr4-l">
           <CoworkingGallery />
+        </div>
+      </div>
+      <FifthMarshallStreetImage className="mb2 mb6-l mw-100" />
+      <div className="page-section page-section--medium flex flex-column flex-row-l tl-l center-l pl4-l pr4-l mb6-l">
+        <div className="w-50-ns w-third-l ml4-l">
+          <h2
+            className={`
+            page-section__title 
+            f2 f1-l
+            pl3 pr3 pt2 pb0 pl0-l pr0-l
+            mb mt4 mb4 mb1-l mt0-l
+          `}
+          >
+            OUTDOOR BEER GARDEN & RECREATION
+          </h2>
+          <p
+            className={`
+            page-section__content
+            f4 f3-l 
+            lh-copy 
+            pa3 pt0 pl0-l pr0-l
+            ml1 mr1
+          `}
+          >
+            The Outdoor Beer Garden offers a common space entirely unique to
+            Winston-Salem’s downtown scene. Professionals, colleagues, and
+            friends can meet for a handcrafted cocktail, a glass of wine or a
+            locally brewed beer. This rejuvenated courtyard will serve as a
+            destination where visitors can have a drink, listen to live music,
+            enjoy food, or even join a group yoga session. The indoor/ outdoor
+            relationship provides a variety of networking and entertainment
+            choices.
+          </p>
+        </div>
+        <div className="w-50-ns w-two-thirds-l pl4-l pr4-l">
+          <BeerGardenPrimary />
         </div>
       </div>
       <MarshallStreetImage className="mb0 mw-100" />

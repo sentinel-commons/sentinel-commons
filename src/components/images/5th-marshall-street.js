@@ -13,19 +13,19 @@ import { isMobile } from '../../utils'
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
 
-const alt = "Renderings of Sentinel Commons with 6th street in foreground"
-const SixthStreetImage = props => (
+const alt = "Renderings of Sentinel Commons with corner of 5th and Marshall street in foreground"
+const FifthMarshallStreetImage = props => (
   <StaticQuery
     query={graphql`
       query {
-        mobileImage: file(relativePath: { eq: "6th-street.jpg" }) {
+        mobileImage: file(relativePath: { eq: "5th-marshall-street.jpg" }) {
           childImageSharp {
             fixed(width: 768, cropFocus: SOUTHEAST) {
               ...GatsbyImageSharpFixed
             }
           }
         }
-        placeholderImage: file(relativePath: { eq: "6th-street.jpg" }) {
+        placeholderImage: file(relativePath: { eq: "5th-marshall-street.jpg" }) {
           childImageSharp {
             fixed(width: 1920, height: 914) {
               ...GatsbyImageSharpFixed
@@ -46,4 +46,4 @@ const SixthStreetImage = props => (
     }
   />
 )
-export default SixthStreetImage
+export default FifthMarshallStreetImage
