@@ -1,9 +1,25 @@
+@import '../styles/var';
+
 .hero {
   min-height: 100vh;
+  max-width: 1920px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+}
+.hero__image {
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-position: center top;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  filter: contrast(.7) saturate(1.5);
 }
 .hero__content {
   font-size: 1rem;
@@ -38,7 +54,14 @@
   .hero {
     min-height: 768px;
   }
+  .hero__image {
+    background-position: center 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: none;
+  }
   .hero__content {
+    padding-top: 3em;
     font-size: 3.25em;
     max-width: 1350px;
   }

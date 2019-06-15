@@ -1,29 +1,25 @@
 import React from "react"
 // import { Link } from "gatsby"
-// import Image from "../components/image"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-
+import HeroImage from "../components/hero-image"
+import SixthStreetImage from "../components/images/6th-street"
+import CoWorkingImage from "../components/images/coworking"
+import FoodHallImage from "../components/images/food-hall"
 import logo from '../images/logo.svg'
-import heroImage from '../images/hero-image.jpg'
 import journalPaperImage from '../images/journal-paper.jpg'
 import journalPressImage from '../images/journal-press.jpg'
 
 import '../components/hero.scss'
 import '../styles/section.scss'
 
-const IndexPage = ({ data }) => {
-  const heroBg = { 
-    background: `linear-gradient(to right, rgba(155, 211, 78, .85) 0%, rgba(0, 164, 225, .85) 66%), url(${heroImage})`,
-    backgroundPosition: '41% 66%',
-    backgroundSize: 'auto 121%',
-  }
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
+const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <div style={heroBg} className="hero">
+      <div className="hero">
         <SEO title="home" />
+        <HeroImage className="hero__image" />
         <div className="hero__content">
           <div className="hero__content__byline">
             <span>UNIQUE OFFICE SPACE, OPPORTUNITIES </span>
@@ -80,6 +76,9 @@ const IndexPage = ({ data }) => {
         `}><strong>Sentinel Commons</strong> is situated just steps away from the City’s most dynamic downtown corridors. <strong>Neighboring attractions</strong> include renowned performance arts venue the Stevens Center, popular local restaurants, hotels, pubs, and breweries. Our location is central to internationally ranked USA Cycling Pro-Road Tour bicycle race, the Winston-Salem Classic. The River Run Film Festival, the National Black Theatre Festival, and various other events are also held downtown throughout the year. We are perfectly situated for the professional who wishes to <strong>enhance the balance between work and leisure.</strong></p>
         </div>
       </div>
+      <SixthStreetImage />
+      <FoodHallImage />
+      <CoWorkingImage />
     </Layout>
   )
 }

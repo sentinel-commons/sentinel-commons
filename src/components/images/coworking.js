@@ -13,20 +13,27 @@ import Img from "gatsby-image"
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
 
-const Image = url => (
+const CoWorkingImage = () => (
   <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: ${url} }) {
+        placeholderImage: file(relativePath: { eq: "co-working.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
+            fixed(width: 1920, height: 914) {
+              ...GatsbyImageSharpFixed
             }
           }
         }
       }
     `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
+    render={data => 
+      <Img 
+        fixed={data.placeholderImage.childImageSharp.fixed} 
+        objectFit="cover"
+        objectPosition="50% 20%"
+        alt="Renderings of Sentinel Commons coworking"
+      />
+    }
   />
 )
-export default Image
+export default CoWorkingImage
