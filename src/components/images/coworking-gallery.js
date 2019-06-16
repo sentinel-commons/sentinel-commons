@@ -25,7 +25,7 @@ const CoworkingGallery = props => (
     `}
     render={data => (
       <div className={`flex h-100-l ${props.className}`} {...props}>
-        <div className="w-50 mr2 mr5-l">
+        <div className="w-50 mr2 mr4-l">
           <Img
             fluid={data.imageOne.childImageSharp.fluid}
             objectFit="cover"

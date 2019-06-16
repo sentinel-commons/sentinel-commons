@@ -206,7 +206,7 @@ const IndexPage = ({ data }) => {
       </div>
       <CoWorkingImage className="mb2 mb6-l site-width--wide center" />
       <div className="page-section page-section--medium flex flex-column flex-row-l tl-l center-l pl4-l pr4-l mb6-l">
-        <div className="w-third-l ml4-l order-2">
+        <div className="w-third-l ml2-l order-2">
           <h2
             className={`
             page-section__title 
