@@ -21,7 +21,14 @@ class Layout extends Component {
   }
 
   setShowForm() {
-    this.setState(({ showForm }) => ({ showForm: !showForm }))
+    this.setState(({ showForm }) => {
+      if (showForm === false) {
+        document.body.style.overflow = "hidden"
+      } else {
+        document.body.style.overflow = "auto"
+      }
+      return { showForm: !showForm }
+    })
   }
 
   render() {

@@ -19,8 +19,10 @@ code {
 .App {
   text-align: center;
   transition: filter .5s;
+  background-color: #fff;
   &.modal-open {
-    filter: blur(4px);
+    overflow-y: hidden;
+    filter: blur(4px) brightness(0.4);
   }
 }
 
