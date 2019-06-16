@@ -18,6 +18,10 @@ code {
 
 .App {
   text-align: center;
+  transition: filter .5s;
+  &.modal-open {
+    filter: blur(4px);
+  }
 }
 
 img {

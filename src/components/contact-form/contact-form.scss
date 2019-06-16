@@ -1,0 +1,59 @@
+.modal {
+  position: fixed;
+  background-color: #fff;
+  top: 4rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 100;
+  box-shadow: 0 8px 8px rgba(0,0,0,.2);
+  border-radius: 3px;
+  animation: fadeInUp .24s ease-in;
+  @media (min-width: 60rem) {
+    width: 35rem;
+    top: 5em;
+    left: calc(50% - 17.5rem);
+  }
+}
+.modal__close {
+  position: absolute;
+  background: none;
+  border: none;
+  top: 1em;
+  right: 1em;
+}
+
+.contact-form__title {
+  color: darken(#00A4E2, 5%); 
+}
+
+.contact-form__textarea,
+.contact-form__label,
+.contact-form__input {
+  display: block;
+  width: 100%;
+}
+.contact-form__textarea {
+  border: 1px solid rgba(0,0,0,.2);
+}
+.contact-form__input {
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+}
+.contact-form__submit {
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  width: 100%;
+  background-color: darken(#00A4E2, 10%); 
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}

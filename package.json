@@ -23,6 +23,7 @@
     "react-dom": "^16.8.6",
     "react-feather": "^1.1.6",
     "react-helmet": "^5.2.1",
+    "react-hubspot-form": "^1.3.7",
     "react-media": "^1.9.2",
     "tachyons": "^4.11.1",
     "typeface-amiri": "^0.0.61",
