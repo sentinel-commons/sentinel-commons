@@ -279,7 +279,7 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
       <BeerGardenGallery className="site-width--medium center mb2 mb6-l pl4-l pr4-l" />
-      <MarshallStreetCourtyardImage className="mb6 site-width--wide center"/>
+      <MarshallStreetCourtyardImage className="mb2 mb6-l site-width--wide center"/>
       <MarshallStreetImage className="mb0 site-width--wide center" />
     </Layout>
   )

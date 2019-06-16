@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "gatsby": "^2.8.6",
+    "gatsby-background-image": "^0.7.1",
     "gatsby-image": "^2.1.2",
     "gatsby-plugin-hubspot": "^1.2.6",
     "gatsby-plugin-manifest": "^2.1.1",
@@ -22,6 +23,7 @@
     "react-dom": "^16.8.6",
     "react-feather": "^1.1.6",
     "react-helmet": "^5.2.1",
+    "react-media": "^1.9.2",
     "tachyons": "^4.11.1",
     "typeface-amiri": "^0.0.61",
     "typeface-montserrat": "^0.0.54"

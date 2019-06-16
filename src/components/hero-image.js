@@ -1,7 +1,8 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-// import Img from "gatsby-image"
-import heroImageMobile from '../images/hero-mobile.jpg'
+import Img from "gatsby-image"
+import Media from "react-media"
+// import heroImageMobile from '../images/hero-mobile.jpg'
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -18,16 +19,16 @@ const HeroImage = props => (
   <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "hero-mobile.jpg" }) {
+        mobileHeroImage: file(relativePath: { eq: "hero-mobile.jpg" }) {
           childImageSharp {
-            fixed(width: 768) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 768, maxHeight: 812) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
         desktopHeroImage: file(relativePath: { eq: "6th-street.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 1920) {
+            fluid(maxWidth: 1920, maxHeight: 772, cropFocus: SOUTH) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -35,16 +36,19 @@ const HeroImage = props => (
       }
     `}
     render={data => {
-      const isMobile = window.outerWidth < 768
-      const heroImageSrc = isMobile
-        ? heroImageMobile
-        : data.desktopHeroImage.childImageSharp.fluid.src
-      const heroBg = {
-        backgroundImage: `linear-gradient(to right, rgba(155, 211, 78, .75) 0%, rgba(0, 164, 225, .75) 66%), url(${heroImageSrc})`,
-      }
-
-      return <div style={heroBg} className="hero__image"></div>
+      return (
+        <Media query={{ maxWidth: '60rem' }}>
+          {matches =>
+            matches ? (
+              <Img className="hero__image" style={{ position: 'absolute' }} fluid={data.mobileHeroImage.childImageSharp.fluid} />
+            ) : (
+              <Img className="hero__image" style={{ position: 'absolute' }} fluid={data.desktopHeroImage.childImageSharp.fluid} />
+            )
+          }
+        </Media>
+      )
     }}
   />
 )
+
 export default HeroImage

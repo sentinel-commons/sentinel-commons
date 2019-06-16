@@ -17,9 +17,19 @@
   bottom: 0;
   z-index: -1;
   background-position: center top;
-  background-size: auto 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   filter: contrast(.7) saturate(1.5);
+  &:before {
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: linear-gradient(to right, rgba(155, 211, 78, .75) 0%, rgba(0, 164, 225, .75) 66%);
+  }
 }
 .hero__content {
   font-size: 1rem;
