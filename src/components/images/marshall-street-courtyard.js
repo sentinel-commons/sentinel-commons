@@ -2,15 +2,12 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const alt =
-  "Renderings of Sentinel Commons with corner of 5th and Marshall street in foreground"
-const FifthMarshallStreetImage = props => (
+const alt = "Renderings of Sentinel Commons with Marshall Street Courtyard"
+const MarshallStreetImage = props => (
   <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(
-          relativePath: { eq: "5th-marshall-street.jpg" }
-        ) {
+        placeholderImage: file(relativePath: { eq: "marshall-street-courtyard.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920, maxHeight: 914, cropFocus: SOUTH) {
               ...GatsbyImageSharpFluid
@@ -19,15 +16,13 @@ const FifthMarshallStreetImage = props => (
         }
       }
     `}
-    render={data => (
-      <Img
+    render={data => <Img
         {...props}
         fluid={data.placeholderImage.childImageSharp.fluid}
-        objectFit="cover"
-        objectPosition="50% 20%"
+        objectFit="fill"
         alt={alt}
       />
-    )}
+    }
   />
 )
-export default FifthMarshallStreetImage
+export default MarshallStreetImage

@@ -9,6 +9,8 @@ import CoworkingGallery from "../components/images/coworking-gallery"
 import MarshallStreetImage from "../components/images/marshall-street"
 import FifthMarshallStreetImage from "../components/images/5th-marshall-street"
 import BeerGardenPrimary from "../components/images/beer-garden-primary"
+import BeerGardenGallery from "../components/images/beer-garden-gallery"
+import MarshallStreetCourtyardImage from "../components/images/marshall-street-courtyard"
 
 // Images
 import logo from "../images/logo.svg"
@@ -145,7 +147,7 @@ const IndexPage = ({ data }) => {
           </p>
         </div>
       </div>
-      <FifthStreetImage className="mb6-l mw-100" />
+      <FifthStreetImage className="mb6-l mw-100 site-width--wide center" />
       <div className="page-section page-section--medium flex flex-column flex-row-l tl-l center-l pl4-l pr4-l mb2 mb6-l">
         <div className="w-third-l mr4-l">
           <h2
@@ -202,7 +204,7 @@ const IndexPage = ({ data }) => {
           />
         </div>
       </div>
-      <CoWorkingImage className="mw-100 mb2 mb6-l" />
+      <CoWorkingImage className="mb2 mb6-l site-width--wide center" />
       <div className="page-section page-section--medium flex flex-column flex-row-l tl-l center-l pl4-l pr4-l mb6-l">
         <div className="w-third-l ml4-l order-2">
           <h2
@@ -240,9 +242,9 @@ const IndexPage = ({ data }) => {
           <CoworkingGallery />
         </div>
       </div>
-      <FifthMarshallStreetImage className="mb2 mb6-l mw-100" />
-      <div className="page-section page-section--medium flex flex-column flex-row-l tl-l center-l pl4-l pr4-l mb6-l">
-        <div className="w-50-ns w-third-l ml4-l">
+      <FifthMarshallStreetImage className="mb2 mb6-l site-width--wide center" />
+      <div className="page-section page-section--medium flex flex-column flex-row-l tl-l center-l pl4-l pr4-l">
+        <div className="w-100 w-50-l w-third-xl ml4-l pr4-l">
           <h2
             className={`
             page-section__title 
@@ -262,21 +264,23 @@ const IndexPage = ({ data }) => {
             ml1 mr1
           `}
           >
-            The Outdoor Beer Garden offers a common space entirely unique to
+            The <strong>Outdoor Beer Garden</strong> offers a common space entirely unique to
             Winston-Salem’s downtown scene. Professionals, colleagues, and
             friends can meet for a handcrafted cocktail, a glass of wine or a
-            locally brewed beer. This rejuvenated courtyard will serve as a
+            locally brewed beer. This <strong>rejuvenated courtyard</strong> will serve as a
             destination where visitors can have a drink, listen to live music,
             enjoy food, or even join a group yoga session. The indoor/ outdoor
-            relationship provides a variety of networking and entertainment
-            choices.
+            relationship provides a variety of <strong>networking and entertainment
+            choices.</strong>
           </p>
         </div>
-        <div className="w-50-ns w-two-thirds-l pl4-l pr4-l">
+        <div className="w-100 w-50-l w-two-thirds-xl pr4-l mb2 mb4-l">
           <BeerGardenPrimary />
         </div>
       </div>
-      <MarshallStreetImage className="mb0 mw-100" />
+      <BeerGardenGallery className="site-width--medium center mb2 mb6-l pl4-l pr4-l" />
+      <MarshallStreetCourtyardImage className="mb6 site-width--wide center"/>
+      <MarshallStreetImage className="mb0 site-width--wide center" />
     </Layout>
   )
 }

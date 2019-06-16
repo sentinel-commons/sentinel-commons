@@ -1,5 +1,7 @@
 @import "~/normalize/normalize.css";
 @import "~/tachyons/css/tachyons.min.css";
+@import "./tachyons-ext.scss";
+@import "./var.scss";
 
 body {
   margin: 0;
@@ -20,4 +22,16 @@ code {
 
 img {
   max-width: 100%;
+}
+
+.site-width {
+  &--narrow {
+    max-width: $page-narrow;
+  }
+  &--medium {
+    max-width: $page-medium;
+  }
+  &--wide {
+    max-width: $page-wide;
+  }
 }

@@ -1,0 +1,12 @@
+@import "var.scss";
+
+.w-third-xl {
+  @media (min-width: $page-wide) {
+    width: 33.333%;
+  }
+}
+.w-two-thirds-xl {
+  @media (min-width: $page-wide) {
+    width: 66.6667%;
+  } 
+}

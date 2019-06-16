@@ -15,7 +15,12 @@ const BeerGardenPrimary = () => (
         }
       }
     `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
+    render={data => <Img
+      className="h-100"
+      fluid={data.placeholderImage.childImageSharp.fluid} 
+      objectFit="cover"
+      style={{ paddingBottom: "1em"}}
+    />}
   />
 )
 export default BeerGardenPrimary

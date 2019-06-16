@@ -7,16 +7,23 @@ const CoworkingGallery = props => (
   <StaticQuery
     query={graphql`
       query {
-        imageOne: file(relativePath: { eq: "laptop-guy.jpg" }) {
+        imageOne: file(relativePath: { eq: "coctail.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 438, maxHeight: 580, cropFocus: WEST) {
+            fluid(maxWidth: 438, maxHeight: 438, cropFocus: EAST) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        imageTwo: file(relativePath: { eq: "macs-rule.jpg" }) {
+        imageTwo: file(relativePath: { eq: "bowling-alley.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 438, maxHeight: 580, cropFocus: WEST) {
+            fluid(maxWidth: 438, maxHeight: 438, cropFocus: WEST) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        imageThree: file(relativePath: { eq: "wine-glasses.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 438, maxHeight: 438, cropFocus: NORTHWEST) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -24,8 +31,8 @@ const CoworkingGallery = props => (
       }
     `}
     render={data => (
-      <div className={`flex h-100-l ${props.className}`} {...props}>
-        <div className="w-50 mr2 mr5-l">
+      <div className={`flex h-100-l ${props.className}`}>
+        <div className="w-third ml4-l">
           <Img
             fluid={data.imageOne.childImageSharp.fluid}
             objectFit="cover"
@@ -34,9 +41,18 @@ const CoworkingGallery = props => (
             alt={alt}
           />
         </div>
-        <div className="w-50">
+        <div className="w-third ml2 ml4-l mr4-l">
           <Img
             fluid={data.imageTwo.childImageSharp.fluid}
+            objectFit="cover"
+            objectPosition="50% 50%"
+            style={{ minHeight: "100%" }}
+            alt={alt}
+          />
+        </div>
+        <div className="w-third ml2 mr4-l">
+          <Img
+            fluid={data.imageThree.childImageSharp.fluid}
             objectFit="cover"
             objectPosition="50% 50%"
             style={{ minHeight: "100%" }}
