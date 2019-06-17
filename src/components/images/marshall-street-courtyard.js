@@ -9,7 +9,7 @@ const MarshallStreetImage = props => (
       query {
         placeholderImage: file(relativePath: { eq: "marshall-street-courtyard.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 1920, maxHeight: 914, cropFocus: SOUTH) {
+            fluid(maxWidth: 1920, maxHeight: 914, cropFocus: SOUTH, quality: 70) {
               ...GatsbyImageSharpFluid
             }
           }

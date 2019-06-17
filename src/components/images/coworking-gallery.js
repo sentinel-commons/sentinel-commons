@@ -9,14 +9,14 @@ const CoworkingGallery = props => (
       query {
         imageOne: file(relativePath: { eq: "laptop-guy.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 438, maxHeight: 580, cropFocus: WEST) {
+            fluid(maxWidth: 438, maxHeight: 580, cropFocus: WEST, quality: 70) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         imageTwo: file(relativePath: { eq: "macs-rule.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 438, maxHeight: 580, cropFocus: WEST) {
+            fluid(maxWidth: 438, maxHeight: 580, cropFocus: WEST, quality: 70) {
               ...GatsbyImageSharpFluid
             }
           }

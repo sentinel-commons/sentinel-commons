@@ -8,7 +8,7 @@ const BeerGardenPrimary = () => (
       query {
         placeholderImage: file(relativePath: { eq: "beer-garden-primary.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 800, quality: 70) {
               ...GatsbyImageSharpFluid
             }
           }

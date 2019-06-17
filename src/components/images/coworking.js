@@ -9,7 +9,7 @@ const CoWorkingImage = props => (
       query {
         placeholderImage: file(relativePath: { eq: "coworking.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 1920, maxHeight: 914, cropFocus: SOUTH) {
+            fluid(maxWidth: 1920, maxHeight: 914, cropFocus: SOUTH, quality: 70) {
               ...GatsbyImageSharpFluid
             }
           }

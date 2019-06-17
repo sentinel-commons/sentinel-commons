@@ -9,21 +9,21 @@ const CoworkingGallery = props => (
       query {
         imageOne: file(relativePath: { eq: "coctail.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 438, maxHeight: 438, cropFocus: EAST) {
+            fluid(maxWidth: 438, maxHeight: 438, cropFocus: EAST, quality: 70) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         imageTwo: file(relativePath: { eq: "bowling-alley.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 438, maxHeight: 438, cropFocus: WEST) {
+            fluid(maxWidth: 438, maxHeight: 438, cropFocus: WEST, quality: 70) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         imageThree: file(relativePath: { eq: "wine-glasses.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 438, maxHeight: 438, cropFocus: NORTHWEST) {
+            fluid(maxWidth: 438, maxHeight: 438, cropFocus: NORTHWEST, quality: 70) {
               ...GatsbyImageSharpFluid
             }
           }

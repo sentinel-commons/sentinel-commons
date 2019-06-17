@@ -9,14 +9,14 @@ const HeroImage = props => (
       query {
         mobileHeroImage: file(relativePath: { eq: "hero-mobile.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 768, maxHeight: 812) {
+            fluid(maxWidth: 768, maxHeight: 812, quality: 70) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         desktopHeroImage: file(relativePath: { eq: "6th-street.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 1920, maxHeight: 772, cropFocus: SOUTH) {
+            fluid(maxWidth: 1920, maxHeight: 772, cropFocus: SOUTH, quality: 70) {
               ...GatsbyImageSharpFluid
             }
           }
