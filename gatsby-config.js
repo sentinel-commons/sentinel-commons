@@ -3,8 +3,31 @@ module.exports = {
     title: `Sentinel Commons`,
     description: ``,
     author: `@gatsbyjs`,
+    siteUrl: `https://www.sentinelcommons.com`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+  
+            allSitePage {
+              edges {
+                node {
+                  path
+                }
+              }
+            }
+        }`
+      }
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
