@@ -2,6 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Media from "react-media"
+import FifthStreetImage from "./images/5th-street"
 
 const HeroImage = props => (
   <StaticQuery
@@ -10,13 +11,6 @@ const HeroImage = props => (
         mobileHeroImage: file(relativePath: { eq: "hero-mobile.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 768, maxHeight: 812, quality: 70) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        desktopHeroImage: file(relativePath: { eq: "6th-street.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1920, maxHeight: 772, cropFocus: SOUTH, quality: 70) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -34,11 +28,7 @@ const HeroImage = props => (
                 fluid={data.mobileHeroImage.childImageSharp.fluid}
               />
             ) : (
-              <Img
-                className="hero__image"
-                style={{ position: "absolute" }}
-                fluid={data.desktopHeroImage.childImageSharp.fluid}
-              />
+              <FifthStreetImage className="hero__image" />
             )
           }
         </Media>
