@@ -12,7 +12,7 @@ function Footer() {
           <a className="footer__link" target="_blank" rel="noopener noreferrer" alt="Twitter - Sentinel Commons" href="https://twitter.com/SentinelCommons">
             <Twitter size={40} fill="#fff" stroke="transparent" className="mr2" />
           </a>
-          <a className="footer__link" target="_blank" rel="noopener noreferrer" alt="Facebook - Sentinel Commons" href="https://www.facebook.com/Sentinel-Commons-365328507456923">
+\          <a className="footer__link" target="_blank" rel="noopener noreferrer" alt="Facebook - Sentinel Commons" href="https://www.facebook.com/Sentinel-Commons-365328507456923">
             <Facebook size={40} fill="#fff" stroke="transparent" className="mr2" />
           </a>
           <a className="footer__link" target="_blank" rel="noopener noreferrer" alt="Instagram - Sentinel Commons" href="https://www.instagram.com/sentinelcommons/">

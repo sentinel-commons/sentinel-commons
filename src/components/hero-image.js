@@ -2,7 +2,6 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Media from "react-media"
-import FifthStreetImage from "./images/5th-street"
 
 const HeroImage = props => (
   <StaticQuery
@@ -15,22 +14,34 @@ const HeroImage = props => (
             }
           }
         }
+        placeholderImage: file(relativePath: { eq: "6th-street.jpg" }) {
+          childImageSharp {
+            fluid(
+              maxWidth: 1920
+              maxHeight: 914
+              cropFocus: SOUTH
+              quality: 70
+            ) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     `}
     render={data => {
       return (
         <Media query={{ maxWidth: "60rem" }}>
-          {matches =>
-            matches ? (
-              <Img
-                className="hero__image"
-                style={{ position: "absolute" }}
-                fluid={data.mobileHeroImage.childImageSharp.fluid}
-              />
-            ) : (
-              <FifthStreetImage className="hero__image" />
-            )
-          }
+          {matches => (
+            <Img
+              className="hero__image"
+              style={{ position: "absolute" }}
+              fluid={
+                matches
+                  ? data.mobileHeroImage.childImageSharp.fluid
+                  : data.placeholderImage.childImageSharp.fluid
+              }
+            />
+          )}
         </Media>
       )
     }}
