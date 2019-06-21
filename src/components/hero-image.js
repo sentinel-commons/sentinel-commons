@@ -9,7 +9,11 @@ const HeroImage = props => (
       query {
         mobileHeroImage: file(relativePath: { eq: "hero-mobile.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 768, maxHeight: 812, quality: 70) {
+            fluid(
+              maxWidth: 768
+              maxHeight: 812
+              quality: 70
+            ) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -30,7 +34,7 @@ const HeroImage = props => (
     `}
     render={data => {
       return (
-        <Media query={{ maxWidth: "60rem" }}>
+        <Media query="(max-width: 60em)">
           {matches => (
             <Img
               className="hero__image"

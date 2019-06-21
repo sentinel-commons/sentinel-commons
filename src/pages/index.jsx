@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 
 // Component Images
 import HeroImage from "../components/hero-image"
@@ -264,14 +265,15 @@ const IndexPage = ({ data }) => {
             ml1 mr1
           `}
           >
-            The <strong>Outdoor Beer Garden</strong> offers a common space entirely unique to
-            Winston-Salem’s downtown scene. Professionals, colleagues, and
-            friends can meet for a handcrafted cocktail, a glass of wine or a
-            locally brewed beer. This <strong>rejuvenated courtyard</strong> will serve as a
-            destination where visitors can have a drink, listen to live music,
-            enjoy food, or even join a group yoga session. The indoor/ outdoor
-            relationship provides a variety of <strong>networking and entertainment
-            choices.</strong>
+            The <strong>Outdoor Beer Garden</strong> offers a common space
+            entirely unique to Winston-Salem’s downtown scene. Professionals,
+            colleagues, and friends can meet for a handcrafted cocktail, a glass
+            of wine or a locally brewed beer. This{" "}
+            <strong>rejuvenated courtyard</strong> will serve as a destination
+            where visitors can have a drink, listen to live music, enjoy food,
+            or even join a group yoga session. The indoor/ outdoor relationship
+            provides a variety of{" "}
+            <strong>networking and entertainment choices.</strong>
           </p>
         </div>
         <div className="w-100 w-50-l w-two-thirds-xl pr4-l mb2 mb4-l">
@@ -279,7 +281,7 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
       <BeerGardenGallery className="site-width--medium center mb2 mb6-l pl4-l pr4-l" />
-      <MarshallStreetCourtyardImage className="mb2 mb6-l site-width--wide center"/>
+      <MarshallStreetCourtyardImage className="mb2 mb6-l site-width--wide center" />
       <MarshallStreetImage className="mb0 site-width--wide center" />
     </Layout>
   )

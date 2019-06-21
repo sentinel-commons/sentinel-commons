@@ -13,6 +13,7 @@ import Header from "./header"
 import Footer from "./footer"
 import ContactForm from "./contact-form"
 import "tachyons/css/tachyons.min.css"
+import "normalize.css/normalize.css"
 import "../styles/layout.scss"
 
 class Layout extends Component {
