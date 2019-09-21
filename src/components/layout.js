@@ -65,30 +65,6 @@ class Layout extends Component {
   }
 }
 
-// = ({ children }) => (
-//   <StaticQuery
-//     query={graphql`
-//       query SiteTitleQuery {
-//         site {
-//           siteMetadata {
-//             title
-//           }
-//         }
-//       }
-//     `}
-//     render={data => (
-//       <>
-//         <Header showForm={() => setShowForm(true)} siteTitle={data.site.siteMetadata.title} />
-//         <div className="App">
-//           <main>{children}</main>
-//           <Footer />
-//           <ContactForm showForm={showForm} />
-//         </div>
-//       </>
-//     )}
-//   />
-// )
-
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
